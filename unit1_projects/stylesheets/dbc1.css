@@ -1,0 +1,16 @@
+body {
+	background-color: #DDDDDD;
+	font-family: "Arial"
+}
+
+#header {
+	color: #111111;
+}
+
+.text {
+	font-size: 14px;
+}
+
+#footer {
+	color: #111111;
+}
