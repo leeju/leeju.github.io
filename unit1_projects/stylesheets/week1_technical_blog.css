@@ -1,11 +1,30 @@
 body {
-	font-family: "Arial";
+	font-family: 'Arial';
 	background-color: #ECEDEE;
 	color: #FFFFFF;
 }
 
 a {
 	text-decoration: none;
+}
+
+span#inline {
+	display: inline;
+	border: 1px solid #0074D9;
+}
+
+span#inline_margin {
+	color: #FFFFFF;
+	display: inline;
+	background-color: #0074D9;
+	padding: 15px;
+}
+
+span#inline_block {
+	color: #FFFFFF;
+	display: inline-block;
+	background-color: #0074D9;
+	padding: 15px;
 }
 
 #header {
