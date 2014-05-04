@@ -4,6 +4,10 @@ body {
 	color: #FFFFFF;
 }
 
+a {
+	text-decoration: none;
+}
+
 #header {
 	margin-left: auto;
 	margin-right: auto;
@@ -26,10 +30,11 @@ body {
 	background-color: #DDDDDD;
 }
 
-#menubar p {
-  	margin-top: 5px;
+#menubar a {
+	line-height: 30px;
    	margin-left: 15px;
-	word-spacing: 30px; 
+   	display: inline;
+   	padding-right: 15px; 
 }
 
 #content_area {
