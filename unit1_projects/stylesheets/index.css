@@ -68,6 +68,19 @@ footer p {
 	padding-left: 50px;
 	padding-right: 50px;
 }
+#blog ul {
+	background-color: #222;
+	color: #fff;
+	text-align: center;
+}
+#blog ul li {
+	background-color: #222;
+	display: inline-block;
+	list-style: none;
+	width: 242.5px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
 @media screen and (max-width: 480px) {
 	body {
     	font-size: 20px;
