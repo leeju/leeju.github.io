@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Justin Lee - Technical Blog</title>
+		<link rel="stylesheet" type="text/css" href="stylesheets/week1_technical_blog.css">
+	</head>
+	<body>
+		<div id="header">
+			<h1>Technical Blog</h1>
+		</div>
+		<div id="menubar">
+			<a href="../index.html">Home</a>
+		</div>
+		<div id="content_area">
+			<h3>Enumerable Methods: #cycle</h3>
+			<p><em>Phase 0 Unit 2: Week 4</em>
+			<p>
+				Today we will be learning about the enumerable method #cycle. This method calls block for each element of enum repeatedly n times or forever if none or nil is given. If a non-positive number is given or the collection is empty, does nothing. Returns nil if the loop has finished without getting interrupted.
+			</p>
+			<p id="code">
+				<code>
+					Example:<br>
+					a = ["a", "b", "c"]<br>
+					a.cycle { |x| puts x } # print, a, b, c, a, b, c,.. forever.<br>
+					a.cycle(2) { |x| puts x }  # print, a, b, c, a, b, c.<br>
+				</code>	
+			</p>
+			<p>
+				Let's say you are at a family barbecue and you need to make a list for your family members so that they can submit their contact information to you for invitations and evites to your wedding. First, you would create an array of all the contact information you want your family members to provide. Then you would want to call the #cycle method on that array with the number of family members you have at the barbecue. Then copy and paste your list into a document and print it out so that you can pass it around to your family members to fill out.
+			</p>
+			<p id="code">
+				<code>
+					INPUT<br>
+					contact_info = ["Name:", "Address:", "Email Address:", ""] # array of family members<br>
+					contact_info.cycle(10) { |x| puts x } # call block for each element repeateadly 10 times<br>
+					<br>
+					OUTPUT<br>
+					Name:<br>
+					Address:<br> 
+					Email Address:<br> 
+					<br>
+					Name:<br> 
+					Address:<br> 
+					Email Address:<br> 
+					<br>
+					Name:<br> 
+					Address:<br> 
+					Email Address:<br> 
+					<br>
+					Name:<br> 
+					Address:<br> 
+					Email Address:<br> 
+					<br>
+					Name:<br> 
+					Address:<br> 
+					Email Address:<br> 
+					<br>
+					Name:<br> 
+					Address:<br> 
+					Email Address:<br> 
+					<br>
+					Name:<br> 
+					Address:<br> 
+					Email Address:<br> 
+					<br>
+					Name:<br> 
+					Address:<br> 
+					Email Address:<br> 
+					<br>
+					Name:<br> 
+					Address:<br> 
+					Email Address:<br> 
+					<br>	
+					Name:<br> 
+					Address:<br> 
+					Email Address:<br>
+				</code>	
+			</p>
+		</div>
+		<div id="footer">
+			<p>Make Beautiful & Meaningful Things</p>
+		</div>
+	</body>
+</html>
