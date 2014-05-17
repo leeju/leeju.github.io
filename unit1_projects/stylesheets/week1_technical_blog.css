@@ -12,20 +12,20 @@ a {
 
 span#inline {
 	display: inline;
-	border: 1px solid #0074D9;
+	border: 1px solid #4472b9;
 }
 
 span#inline_margin {
 	color: #FFFFFF;
 	display: inline;
-	background-color: #0074D9;
+	background-color: #4472b9;
 	padding: 15px;
 }
 
 span#inline_block {
 	color: #FFFFFF;
 	display: inline-block;
-	background-color: #0074D9;
+	background-color: #4472b9;
 	padding: 15px;
 }
 
