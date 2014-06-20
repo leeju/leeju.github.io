@@ -80,9 +80,6 @@ header .tagline {
     padding-bottom: 50px;
     font-family: Arial, sans-serif;
 }
-#blog ul li:hover { 
-    background-color: #4472b9; 
-}
 .circular img {
     margin-top: 90px;
     margin-bottom: 25px;
@@ -97,6 +94,19 @@ header .tagline {
     width: 660px;
     font-family: Arial, sans-serif;
 }
+.description-2 {
+    margin-left: auto;
+    margin-right: auto;
+}
+.description-2 p {
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 45px; 
+    width: 660px;
+    font-family:Arial, sans-serif;
+    font-size: 18px;
+}
+
 .nav ul {
     background-color: #4472b9;
     text-align: center;
@@ -109,6 +119,21 @@ header .tagline {
     letter-spacing: 0.1em;
     padding-top: 22px;
     padding-bottom: 19px;
+    font-family:'Montserrat', sans-serif;
+}
+.about-nav ul {
+    background-color: #4472b9;
+    text-align: center;
+}
+.about-nav ul li {
+    width: 200px;
+    display: inline-block;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 0.1em;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 20px;
     font-family:'Montserrat', sans-serif;
 }
 a:link {
