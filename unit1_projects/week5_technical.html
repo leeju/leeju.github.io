@@ -1,103 +1,109 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Justin Lee - Technical Blog</title>
-		<link rel="stylesheet" type="text/css" href="stylesheets/week1_technical_blog.css">
-	</head>
-	<body>
-		<div id="header">
-			<h1>Technical Blog</h1>
-		</div>
-		<div id="menubar">
-			<a href="../index.html">Home</a>
-		</div>
-		<div id="content_area">
-			<h3>Ruby Classes</h3>
-			<p><em>Phase 0 Unit 2: Week 5</em>
-			<p>
-				Classes can be used to create new objects. Typically, you create a new class by using:
-			</p>
-			<p id="code">
-				<code>
-					# -> This symbol represents an indent.<br>
-					<br>
-					class Name<br>
-					-> some class describing the class behavior<br>
-					end<br>
-				</code>	
-			</p>
-			<p>
-				You can also create things that the object knows and does. Things an object knows about itself are called instance variables. You'll want to initialize instance variable when a new object of class is created. 
-			</p>
-			<p>
-				Here's an example:
-			</p>
-			<p id="code">
-				<code>
-					class Person<br>
-					-> def initialize(name, age)<br>
-					-> -> @name = name<br>
-					-> -> @age = age<br>
-					-> end<br>
-					end<br>
-				</code>	
-			</p>
-			<p>
-				Now let's talk about how to create things the object does. These are called methods. In the class Person above, let's create a hello method that returns the object's name and asks "What's your's?"
-			</p>
-			<p id="code">
-				<code>
-					class Person<br>
-					-> def initialize(name)<br>
-					-> -> @name = name<br>
-					-> end<br>
-					<br>
-					-> def hello<br>
-					-> -> puts "Hi, my name is #{@name}. What's your's?"<br>
-					-> end<br>
-					end				
-				</code>	
-			</p>
-			<p>	
-				Now let's create a new Person object and call the hello method on it.
-			</p>
-			<p id="code">
-				<code>
-					person_new = Person.new('Justin')<br>
-					person_new.hello # => "Hi, my name is Justin. What's your's?"			
-				</code>	
-			</p>
-			<p>	
-				You can create another new Person object by using the code above, replacing 'Justin' with another name and person_new with your own variable.
-			</p>
-			<p>	
-				Now that we have a class, instance variables, and a method, I would like to raise an Argument Error: "You forgot to add a name." when someone forgets to add a name when creating a new Person object. This goes in the initialize area of the code.
-			</p>
-			<p id="code">
-				<code>
-					class Person<br>
-					-> def initialize(name)<br>
-					-> -> @name = name<br>
-					-> -> raise ArgumentError.new("You forgot to add a name.")<br>
-					-> end<br>
-					<br>
-					-> def hello<br>
-					-> -> puts "Hi, my name is #{@name}. What's your's?"<br>
-					-> end<br>
-					end				
-				</code>	
-			</p>
-			<p>	
-				Therefore, if you create a new Person object without a name here is what you will get:
-			</p>
-			<p id="code">
-				<code>
-					person_new = Person.new('') # => ArgumentError: "You forgot to add a name."		
-				</code>	
-			</p>
-		</div>
-		<div id="footer">
-			<p>Make Beautiful & Meaningful Things</p>
-		</div>
-	</body>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+    <title>Justin Lee - Technical Blog</title>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel=
+    'stylesheet' type='text/css'>
+    <link href="stylesheets/week1_technical_blog.css" rel="stylesheet" type=
+    "text/css">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="unit1_projects/stylesheets/index.css"> -->
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+
+            <li><a href="dbc1.html">About</a></li>
+
+            <li><a href="../index.html#blog">Blog</a></li>
+
+            <li><a href="mailto:jsle87@gmail.com">Contact</a></li>
+        </ul>
+    </div>
+
+    <header>
+        <center><p class="tagline">Technical Blog</p><br><center>
+    </header>
+
+    <div class="description">
+        <h3>Ruby Classes</h3>
+
+        <p><em>Phase 0 Unit 2: Week 5</em></p><br>
+
+        <p>Classes can be used to create new objects. Typically, you create a
+        new class by:</p><br>
+
+        <p id="code"><code># -&gt; This symbol represents an indent.<br>
+        <br>
+        class Name<br>
+        -&gt; some class describing the class behavior<br>
+        end<br></code></p><br>
+
+        <p>You can also create things that the object knows and does. Things an
+        object knows about itself are called instance variables. You'll want to
+        initialize instance variable when a new object of class is created.</p><br>
+
+        <p>Here's an example:</p><br>
+
+        <p id="code"><code>class Person<br>
+        -&gt; def initialize(name, age)<br>
+        -&gt; -&gt; @name = name<br>
+        -&gt; -&gt; @age = age<br>
+        -&gt; end<br>
+        end<br></code></p><br>
+
+        <p>Now let's talk about how to create things the object does. These are
+        called methods. In the class Person above, let's create a hello method
+        that returns the object's name and asks "What's your's?"</p><br>
+
+        <p id="code"><code>class Person<br>
+        -&gt; def initialize(name)<br>
+        -&gt; -&gt; @name = name<br>
+        -&gt; end<br>
+        <br>
+        -&gt; def hello<br>
+        -&gt; -&gt; puts "Hi, my name is #{@name}. What's your's?"<br>
+        -&gt; end<br>
+        end</code></p><br>
+
+        <p>Now let's create a new Person object and call the hello method on
+        it.</p><br>
+
+        <p id="code"><code>person_new = Person.new('Justin')<br>
+        person_new.hello # =&gt; "Hi, my name is Justin. What's
+        your's?"</code></p><br>
+
+        <p>You can create another new Person object by using the code above,
+        replacing 'Justin' with another name and person_new with your own
+        variable.</p><br>
+
+        <p>Now that we have a class, instance variables, and a method, I would
+        like to raise an Argument Error: "You forgot to add a name." when
+        someone forgets to add a name when creating a new Person object. This
+        goes in the initialize area.</p><br>
+
+        <p id="code"><code>class Person<br>
+        -&gt; def initialize(name)<br>
+        -&gt; -&gt; @name = name<br>
+        -&gt; -&gt; raise ArgumentError.new("You forgot to add a name.")<br>
+        -&gt; end<br>
+        <br>
+        -&gt; def hello<br>
+        -&gt; -&gt; puts "Hi, my name is #{@name}. What's your's?"<br>
+        -&gt; end<br>
+        end</code></p><br>
+
+        <p>Therefore, if you create a new Person object without a name:</p><br>
+
+        <p id="code"><code>person_new = Person.new('') # =&gt; ArgumentError:
+        "You forgot to add a name."</code></p><br>
+    </div>
+
+    <footer>
+        <p>Make Beautiful &amp; Meaningful Things</p>
+    </footer>
+</body>
 </html>

@@ -1,101 +1,124 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Justin Lee - Technical Blog</title>
-		<link rel="stylesheet" type="text/css" href="stylesheets/week1_technical_blog.css">
-	</head>
-	<body>
-		<div id="header">
-			<h1>Technical Blog</h1>
-		</div>
-		<div id="menubar">
-			<a href="../index.html">Home</a>
-		</div>
-		<div id="content_area">
-			<h3>Blocs, Procs, and Lambdas</h3>
-			<p><em>Phase 0 Unit 2: Week 6</em>
-			<p>
-				"A <b>block</b> is a chunk of code that lives inside a control statement, loop, method definition, or method call. It returns the value of its last line. In Ruby, blocks can be created two ways: with braces or with a do/end statement." (<a href="http://www.codecademy.com/glossary/ruby/blocks">Source</a>)
-			</p>
-			<p>
-				Here's are two examples:
-			</p>
-			<p id="code">
-				<code>
-					3.times { puts "I love my wife!" } # with braces<br> 
-					<br>
-					I love my wife!<br>
-					I love my wife!<br>
-					I love my wife!<br>
-					<br>
-					["apples","bananas","oranges"].each do |fruit| # with a do/end statement<br>
-					-> puts "I love #{fruit}!"<br>
-					end<br>
-					<br>
-					I love apples!<br>
-					I love bananas!<br> 	
-					I love oranges!<br>
-				</code>	
-			</p>
-			<p>
-				"Blocks are not objects, and because of this, blocks can't be saved to variables and don't have all the powers and abilities of a real object. For that, we'll need... <b>procs</b>! You can think of a proc as a "saved" block: just like you can give a bit of code a name and turn it into a method, you can name a block and turn it into a proc. With blocks, you have to write your code out each time you need it; with a proc, you write your code once and can use it many times!" (<a href="http://www.codecademy.com/courses/ruby-beginner-en-L3ZCI/1/1?curriculum_id=5059f8619189a5000201fbcb">Source</a>)
-			</p>
-			<p>
-				Below is an example of a proc that that you can use many times:
-			</p>
-			<p id="code">
-				<code>
-					# The time-qualifying standards for the New York City Marathon<br>
-					# are as follows (women age 18-39 only); all times run must be<br>
-					# at least as fast as the posted time: 2.75 hours. Let's use .select<br>
-					# on each group to get only the ones 2.75 hours or faster.<br>
-					<br>
-					group_1 = [3.1, 2.5, 3.2, 2.3, 2.6, 2.9, 2.7]<br>
-					group_2 = [3.0, 2.8, 2.2, 3.1, 2.4, 2.9, 3.0]<br>
-					group_3 = [2.5, 3.1, 2.9, 2.3, 2.9, 3.2, 3.2]<br>
-					<br>
-					time_qualifiers = Proc.new do |time|<br>
-					-> time <= 2.75<br>
-					end<br>
-					<br>
-					print can_run_1 = group_1.select(&time_qualifiers)<br>
-					print can_run_1 = group_1.select(&time_qualifiers)<br>
-					print can_run_1 = group_1.select(&time_qualifiers)<br>
-					<br>
-					[2.5, 2.3, 2.6, 2.7][2.2, 2.4][2.5, 2.3]
-				</code>	
-			</p>
-			<p>
-				"<b>Lambdas</b> are identical to procs. When a lambda returns, it passes control back to the calling method; when a proc returns, it does so immediately, without going back to the calling method." (<a href="http://www.codecademy.com/courses/ruby-beginner-en-L3ZCI/2/1?curriculum_id=5059f8619189a5000201fbcb">Source</a>)
-			</p>
-			<p>
-				Here's a look at how this works. Take a look at the code in the box below:
-			</p>			
-			<p id="code">
-				<code>
-					def batman_v_superman_proc<br>
-					-> dawn_of_justice = Proc.new { return "Batman will win!" }<br>
-					-> dawn_of_justice.call<br>
-					-> "Superman will win!"<br>
-					end<br>
-					<br>
-					puts batman_v_superman_proc<br>
-					<br>
-					def batman_v_superman_lambda<br>
-					-> dawn_of_justice = lambda { return "Batman will win!" }<br>
-					-> dawn_of_justice.call<br>
-					-> "Superman will win!"<br>
-					end<br>
-					<br>
-					puts batman_v_superman_lambda<br>
-					<br>
-					Batman will win!<br>
-					Superman will win!<br>
-				</code>	
-			</p>
-		</div>
-		<div id="footer">
-			<p>Make Beautiful & Meaningful Things</p>
-		</div>
-	</body>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+    <title>Justin Lee - Technical Blog</title>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel=
+    'stylesheet' type='text/css'>
+    <link href="stylesheets/week1_technical_blog.css" rel="stylesheet" type=
+    "text/css">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="unit1_projects/stylesheets/index.css"> -->
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+
+            <li><a href="dbc1.html">About</a></li>
+
+            <li><a href="../index.html#blog">Blog</a></li>
+
+            <li><a href="mailto:jsle87@gmail.com">Contact</a></li>
+        </ul>
+    </div>
+
+    <header>
+        <center><p class="tagline">Technical Blog</p><br><center>
+    </header>
+
+    <div class="description">
+        <h3>Blocs, Procs, and Lambdas</h3>
+
+        <p><em>Phase 0 Unit 2: Week 6</em></p><br>
+
+        <p>"A <b>block</b> is a chunk of code that lives inside a control
+        statement, loop, method definition, or method call. It returns the
+        value of its last line. In Ruby, blocks can be created two ways: with
+        braces or with a do/end statement." (<a href=
+        "http://www.codecademy.com/glossary/ruby/blocks">Source</a>)</p><br>
+
+        <p>Here's are two examples:</p><br>
+
+        <p id="code"><code>3.times { puts "I love my wife!" } # with braces<br>
+        <br>
+        I love my wife!<br>
+        I love my wife!<br>
+        I love my wife!<br>
+        <br>
+        ["apples","bananas","oranges"].each do |fruit| # with a do/end
+        statement<br>
+        -&gt; puts "I love #{fruit}!"<br>
+        end<br>
+        <br>
+        I love apples!<br>
+        I love bananas!<br>
+        I love oranges!<br></code></p><br>
+
+        <p>"Blocks are not objects, and because of this, blocks can't be saved
+        to variables and don't have all the powers and abilities of a real
+        object. For that, we'll need... <b>procs</b>! You can think of a proc
+        as a "saved" block: just like you can give a bit of code a name and
+        turn it into a method, you can name a block and turn it into a proc.
+        With blocks, you have to write your code out each time you need it;
+        with a proc, you write your code once and can use it many times!"
+        (<a href=
+        "http://www.codecademy.com/courses/ruby-beginner-en-L3ZCI/1/1?curriculum_id=5059f8619189a5000201fbcb">Source</a>)</p><br>
+
+        <p>Below is an example of a proc that that you can use many times:</p><br>
+
+        <p id="code"><code># The time-qualifying standards for the New York
+        City Marathon<br>
+        # are as follows (women age 18-39 only); all times run must be<br>
+        # at least as fast as the posted time: 2.75 hours. Let's use
+        .select<br>
+        # on each group to get only the ones 2.75 hours or faster.<br>
+        <br>
+        group_1 = [3.1, 2.5, 3.2, 2.3, 2.6, 2.9, 2.7]<br>
+        group_2 = [3.0, 2.8, 2.2, 3.1, 2.4, 2.9, 3.0]<br>
+        group_3 = [2.5, 3.1, 2.9, 2.3, 2.9, 3.2, 3.2]<br>
+        <br>
+        time_qualifiers = Proc.new do |time|<br>
+        -&gt; time &lt;= 2.75<br>
+        end<br>
+        <br>
+        print can_run_1 = group_1.select(&amp;time_qualifiers)<br>
+        print can_run_1 = group_1.select(&amp;time_qualifiers)<br>
+        print can_run_1 = group_1.select(&amp;time_qualifiers)<br>
+        <br>
+        [2.5, 2.3, 2.6, 2.7][2.2, 2.4][2.5, 2.3]</code></p><br>
+
+        <p>"<b>Lambdas</b> are identical to procs. When a lambda returns, it
+        passes control back to the calling method; when a proc returns, it does
+        so immediately, without going back to the calling method." (<a href=
+        "http://www.codecademy.com/courses/ruby-beginner-en-L3ZCI/2/1?curriculum_id=5059f8619189a5000201fbcb">Source</a>)</p><br>
+
+        <p>Here's a look at how this works. Take a look at the code in the box
+        below:</p><br>
+
+        <p id="code"><code>def batman_v_superman_proc<br>
+        -&gt; dawn_of_justice = Proc.new { return "Batman will win!" }<br>
+        -&gt; dawn_of_justice.call<br>
+        -&gt; "Superman will win!"<br>
+        end<br>
+        <br>
+        puts batman_v_superman_proc<br>
+        <br>
+        def batman_v_superman_lambda<br>
+        -&gt; dawn_of_justice = lambda { return "Batman will win!" }<br>
+        -&gt; dawn_of_justice.call<br>
+        -&gt; "Superman will win!"<br>
+        end<br>
+        <br>
+        puts batman_v_superman_lambda<br>
+        <br>
+        Batman will win!<br>
+        Superman will win!<br></code></p><br>
+    </div>
+
+    <footer>
+        <p>Make Beautiful &amp; Meaningful Things</p>
+    </footer>
+</body>
 </html>
