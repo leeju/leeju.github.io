@@ -88,3 +88,25 @@ a:link {
 a:visited {
     color:#fff;
 }
+span#inline {
+    display: inline;
+    border: 1px solid #4472b9;
+}
+
+span#inline_margin {
+    color: #FFFFFF;
+    display: inline;
+    background-color: #4472b9;
+    padding: 15px;
+}
+
+span#inline_block {
+    color: #FFFFFF;
+    display: inline-block;
+    background-color: #4472b9;
+    padding: 15px;
+}
+#code {
+    background-color: #f3f3f7;
+    padding: 10px;
+}
