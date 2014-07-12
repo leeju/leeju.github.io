@@ -37,13 +37,14 @@ a {
     text-decoration: none;
 }
 footer {
+    background-color: #20272d;
     margin-left: auto;
     margin-right: auto;
     padding: 60px 0 100px;
 }
 footer p {
     text-align: center;
-    color: #111;
+    color: #fff;
     text-transform: uppercase;
     font-family:'Montserrat', sans-serif;
 }
