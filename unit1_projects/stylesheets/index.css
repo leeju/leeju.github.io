@@ -67,12 +67,12 @@ header .tagline {
     font-size: 24px;
 }
 #blog ul {
-    background-color: #333;
+    background-color: #32393f;
     color: #fff;
     text-align: center;
 }
 #blog ul li {
-    background-color: #333;
+    background-color: #32393f;
     display: inline-block;
     list-style: none;
     width: 242.5px;
