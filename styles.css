@@ -162,7 +162,7 @@ nav ul li.active a {
 .banner-caption {
   background: #000;
   background: rgba(0,0,0,0.6);
-  bottom: 20px;
+  bottom: 0;
   color: #fff;
   padding: 15px 0;
   position: absolute;
@@ -171,7 +171,7 @@ nav ul li.active a {
   left: 0;
   right: 0;
   text-align: center;
-  width: 42.5531915%;
+  width: 320px;
 }
 
 /* -- Main -- */
@@ -280,7 +280,6 @@ nav ul li.active a {
     font-size: 1em; /* 16px */
   }
   .banner-caption {
-    bottom: 0;
     width: 100%;
   }
 }
